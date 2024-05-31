@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="Ur">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spell Checker</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="https://i.ibb.co/rfWQCRM/Urdu-Spellify.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <style>
+        /* Additional CSS for right-to-left direction */
+        textarea {
+            direction: rtl;
+            text-align: right;
+            /* Align text to the right */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="https://i.ibb.co/rfWQCRM/Urdu-Spellify.png" alt="Urdu Spellify Logo">
+
+        </div>
+
+        <nav>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+
+    <div class="container">
+        <img src="https://i.ibb.co/rfWQCRM/Urdu-Spellify.png" alt="Urdu Spellify Logo" height="50%" width="50%">
+        <form action="/correct" method="post">
+            <textarea id="urduTextarea" name="user_input" rows="4" placeholder="اپنا جملہ یہاں درج کریں۔"></textarea>
+            <div class="button-header">
+                <button type="submit">Check Spelling</button>
+                <!-- Add the clear button -->
+                <button type="button" class="clear-button" onclick="clearTextarea()">Reset</button>
+            </div>
+
+
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Urdu Spellify All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        // Get the textarea element
+        var urduTextarea = document.getElementById('urduTextarea');
+
+        // Set the cursor position to the end of the text
+        urduTextarea.selectionStart = urduTextarea.selectionEnd = urduTextarea.value.length;
+
+        // Function to clear the textarea
+        function clearTextarea() {
+            urduTextarea.value = ''; // Clear the textarea
+        }
+    </script>
+</body>
+
+</html>

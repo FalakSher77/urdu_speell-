@@ -1,0 +1,80 @@
+<!-- 02 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spell Checker Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="https://i.ibb.co/rfWQCRM/Urdu-Spellify.png" alt="Urdu Spellify Logo">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Spell Checker Result --- اسپیل چیکر کے نتائج</h2>
+        <p>Original Input --- اصل ان پٹ <br><span id="userInput">{{ user_input }}</span></p>
+
+        <div id="predictedWords">
+            {% if suggestions %}
+            <h3>Suggested Words --- تجویز کردہ الفاظ</h3>
+            <ul>
+                {% for idx, suggestion_list in suggestions.items() %}
+
+                <li>Suggested words for word --- ( {{ idx }} ) --- لفظ کے بدلے تجویز کردہ لفظ</li>
+                <ul class="sugulist">
+                    {% for suggestion in suggestion_list %}
+                    <li class="suglist"><span class="suggestion" data-word="{{ idx }}">{{ suggestion }}</span></li>
+                    {% endfor %}
+                </ul>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No misspelled words found.</p>
+            {% endif %}
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Urdu Spellify All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for adding interactivity
+        const predictedWords = document.querySelectorAll('.suggestion');
+
+        // Adding a hover effect to predicted words
+        predictedWords.forEach(word => {
+            word.addEventListener('mouseover', () => {
+                word.style.fontWeight = 'bold';
+            });
+
+            word.addEventListener('mouseout', () => {
+                word.style.fontWeight = 'normal';
+            });
+
+            // Adding click event to replace misspelled word with suggestion
+            word.addEventListener('click', () => {
+                const userInput = document.getElementById('userInput');
+                const misspelledWord = word.dataset.word;
+                const correctedWord = word.innerText;
+                const userInputText = userInput.innerText;
+                const updatedUserInputText = userInputText.replace(misspelledWord, correctedWord);
+                userInput.innerText = updatedUserInputText;
+            });
+        });
+    </script>
+</body>
+
+</html>

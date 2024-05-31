@@ -1,0 +1,21 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 819-285-836
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 22:33:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 22:33:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 22:33:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 22:33:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Word index: 0 	False word: \u0639\u0633\u06a9\u0631\u06cc\u062a
+INFO:root:Predicted words: {'\u0639\u0633\u06a9\u0631\u06cc\u062a': 2.0307145576849858e-05, '\u0627\u0633\u06a9\u0631\u06cc\u0646': 2.0307145576849858e-05, '\u0639\u0633\u06cc\u0631\u06cc\u06ba': 0.0, '\u0639\u0633\u0641\u06cc\u062a': 0.0}
+INFO:root:Word index: 1 	False word: \u067e\u0633\u0646\u062f\u06cc
+INFO:root:Predicted words: {'\u0633\u0646\u062f\u06be': 0.00043660362990227187, '\u067e\u0627\u0646\u06cc': 0.00023353217413377335, '\u067e\u0627\u0628\u0646\u062f\u06cc': 0.0001116893006726742, '\u067e\u06c1\u0646\u0686\u06cc': 4.0614291153699716e-05}
+INFO:root:Word index: 2 	False word: \u0647\u0648\u0646\u06cc
+INFO:root:Predicted words: {'\u06c1\u0648\u0646\u06d2': 0.000842746541439269, '\u06c1\u0648\u0626\u06cc': 0.0005482929305749461, '\u0627\u067e\u0646\u06cc': 0.00042645005711384695, '\u06a9\u0648\u0626\u06cc': 0.00034522147480644757}
+INFO:root:Word index: 3 	False word: \u0648\u0627\u0644\u06cc
+INFO:root:Predicted words: {'\u0633\u0627\u0644': 0.0009239751237466685, '\u0648\u0627\u0644\u06d2': 0.0009036679781698185, '\u062c\u0627\u0631\u06cc': 0.0007818251047087194, '\u0648\u0627\u0644\u06cc': 0.0006599822312476204}
+INFO:root:Word index: 4 	False word: \u0628\u062d\u0631\u0627\u0646
+INFO:root:Predicted words: {'\u062f\u0648\u0631\u0627\u0646': 0.000710750095189745, '\u0639\u0645\u0631\u0627\u0646': 0.00033506790201802265, '\u0628\u06cc\u0627\u0646': 0.00017261073740322379, '\u0627\u06cc\u0631\u0627\u0646': 0.00010153572788424928}
+INFO:root:
+Execution time: 10.88370943069458 seconds
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 22:33:48] "POST /correct HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Feb/2024 22:33:48] "[36mGET /static/style.css. HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'd:\\Project\\app.py', reloading
